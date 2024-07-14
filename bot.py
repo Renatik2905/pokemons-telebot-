@@ -1,4 +1,4 @@
-import telebot 
+import telebot
 from config import token
 from random import randint
 from logic import Pokemon, Wizard, Fighter
@@ -20,7 +20,7 @@ def start(message):
     else:
         bot.reply_to(message, "Ты уже создал себе покемона")
 
-@bot.message_handler(commands=[' attack'])
+@bot.message_handler(commands=['attack'])
 def attack_pok(message):
     if message.reply_to_message:
         if message.reply_to_message.from_user.username in Pokemon.pokemons.keys() and message.from_user.username in Pokemon.pokemons.keys():
@@ -32,5 +32,22 @@ def attack_pok(message):
             bot.send_message(message.chat.id, "Сражатся можно только с покемонами")
     else:
             bot.send_message(message.chat.id, "Чтобы атаковать, нужно ответить на сообщения того, кого хочеь атаковать" )        
+
+@bot.message_handler(commands=['info'])
+def info_pok(message):
+    if message.reply_to_message:
+        if message.from_user.username in Pokemon.pokemons.keys():
+            pok = Pokemon.pokemons[message.from_user.username]
+            bot.send_message(message.chat.id, pok.info())
+        else:
+            bot.send_message(message.chat.id, "У вас нет покемона")
+
+            
+@bot.message_handler(commands=['feed'])
+def feed(message):
+    if message.reply_to_message:
+        if message.from_user.username in Pokemon.pokemons.keys():
+            pok = Pokemon.pokemons[message.from_user.username]
+            bot.send_message(message.chat.id, pok.feed())
 
 bot.infinity_polling(none_stop=True)
