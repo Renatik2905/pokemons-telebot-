@@ -1,9 +1,9 @@
 **POKEMONTELEGRAMBOT**
 Этот проект - телеграм _бот/игра_ про покемонов
 Она чем-то похожа на тамогочи, вы получаете своего покемона и можете посмотреть его силы **(взависимости от его статуса)**, покормить его раз в день и **АТТАКОВАТЬ** других покемонов**(если вы добавите бота в группу)**
-**СКРИНШОТЫ**
-![image](https://github.com/user-attachments/assets/9df5a3e9-a1ee-4e1f-838c-a3f3324eba35)
-![image](https://github.com/user-attachments/assets/c00c38fd-c43d-4304-9e8d-fd57113693fe)
+  **СКРИНШОТЫ**
+          ![image](https://github.com/user-attachments/assets/9df5a3e9-a1ee-4e1f-838c-a3f3324eba35)
+          ![image](https://github.com/user-attachments/assets/c00c38fd-c43d-4304-9e8d-fd57113693fe)
 
 Создал:
 Ренат Руденко, 13 лет, ученик школы програмирования Kodland на курсе Pyhton lvl3
